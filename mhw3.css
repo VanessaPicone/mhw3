@@ -1,0 +1,1406 @@
+body{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+  }
+  
+@media (max-width:500px){
+    body{
+        font-size: 14px;
+    }
+}
+.hidden{
+    display:none;
+}
+
+#links a{
+    cursor: pointer;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+}
+#links a:hover{
+    background-color: rgb(240, 238, 238);
+    border-radius: 50px;
+    
+}
+
+
+#link1-view, #link2-view,
+#link3-view, #link4-view{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width: 100vw;
+
+    background-color: rgba(0, 0, 0, 0.045);
+    z-index: 2;
+
+}
+.casella1{
+    position:relative;
+    top:60px;
+    left:580px;
+    background-color: white;
+    width: 160px;
+    height:auto;
+    padding: 0 16px;
+    border-radius: 10px;
+}
+.casella2{
+    position:relative;
+    top:60px;
+    left:670px;
+    background-color: white;
+    width: 160px;
+    height:auto;
+    padding: 0 16px;
+    border-radius: 10px;
+}
+.casella3{
+    position:relative;
+    top:60px;
+    left:750px;
+    background-color: white;
+    width: 160px;
+    height:auto;
+    padding: 0 16px;
+    border-radius: 10px;
+}
+.casella4{
+    position:relative;
+    top:60px;
+    left:870px;
+    background-color: white;
+    width: 160px;
+    height:auto;
+    padding: 0 16px;
+    border-radius: 10px;
+}
+
+.modal-text{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 16px;
+    color:black;
+    font-weight: 600;
+    margin-top:15px;
+    padding-bottom: 15px;
+}
+.modal-text a{
+   margin-top:20px;
+   font-size: 16px;
+}
+.casella1:after,
+.casella2::after,
+.casella3::after,
+.casella4::after {
+    border-color: white transparent;
+    border-style: solid;
+    border-width: 0 10px 8px;
+    content: "";
+    left: 24px;
+    position: absolute;
+    top: -8px;
+}
+#tendina{
+    display: none;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top:10px;
+    width: 100%;
+    display: flex;
+    height: 60px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+}
+.tendina img{
+    display:none;
+}
+#accedi img{
+    display:none;
+}
+
+img{
+    width: 188px;
+    height: 60%;
+}
+
+.buttons{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height: 50px;
+    margin:5px;
+}
+#button2 a{
+    background-color: black;
+    border-radius: 50px;
+    color:white;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+#button2 a:hover{
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+
+#modal-view-Accedi.hidden,
+#modal-view-Cambio.hidden{
+    display:none;
+}
+#modal-view-Accedi, #modal-view-Cambio{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width: 100vw;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.482);
+    width: 400px;
+    height:500px;
+    padding: 40px 45px 25px 45px;
+    border-radius: 10px;
+
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    position:absolute;
+}
+
+.modal-content #X-Accedi{
+    position: relative;
+    top:0;
+    left:400px;
+    width: 40px;
+    min-height:40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content #X-Accedi:hover{
+    background-color: rgb(240, 238, 238);
+    border-radius: 50%;
+}
+.modal-content #p1{
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px 0 5px;
+}
+.modal-content #p1 img{
+    height:50px;
+    width: 50px;
+}
+#p1 p{
+    margin-top: 5px;
+    font-size: 28px;
+    font-weight: 800;
+    width: 300px;
+    height: auto;
+}
+#p1 .accessi{
+    margin-top: 12px;
+    margin-bottom: 60px;
+}
+
+.accessi #accesso{
+    border-radius: 50px;
+    border: 2px solid black;
+    margin-bottom:24px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.accessi #accesso #simbolo{
+    margin-left: 24px;
+    margin-right:40px;
+    width: 20px;
+    height: 20px;
+}
+#p1 .accessi p{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top:12px;
+    font-size: 16px;
+}
+.modal-content .fine3{
+    margin-top:0;
+    margin-left:0;
+    padding-left: 0;
+    width: 400px;
+}
+.modal-content .fine3 div{
+    display:flex;
+    justify-content: center;
+    width: auto;
+}
+.modal-content .fine3 p{
+    margin-top: 0;
+    text-align: center;
+}
+.modal-content .fine3 a{
+    text-decoration: underline;
+    color:#333333;
+}
+.modal-content-Cambio{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.482);
+    width: 750px;
+    height:500px;
+    padding: 40px 45px 0 45px;
+    border-radius: 10px;
+
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    position:absolute;
+}
+.modal-content-Cambio #X-Cambio{
+    position: relative;
+    top:-30px;
+    left:750px;
+    width: 40px;
+    min-height:40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content-Cambio #X-Cambio:hover{
+    background-color: rgb(240, 238, 238);
+    border-radius: 50%;
+}
+.modal-content-Cambio h2{
+    font-size: 28px;
+}
+.modal-content-Cambio #sottotitolo{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.modal-content-Cambio #sottotitolo p{
+    margin-top:0;
+    margin-bottom:0;
+    padding-left: 0;
+    padding-right:20px;
+    font-weight: 700;
+    color:black;
+    font-size:16px;
+    cursor: pointer;
+}
+.modal-content-Cambio h3{
+    font-size: 18px;
+    margin-top:30px;
+    padding-top:20px;
+
+}
+.modal-content-Cambio #Area{
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin:5px;
+    height:220px;
+}
+#Area #riga{
+    display:flex;
+    justify-content: space-between;
+    margin:5px;
+}
+#Area .lingua, .linguaIT{
+    min-width: 130px;
+    height:45px;
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.linguaIT{
+    background-color: black;
+    border-radius: 5px;
+    color:white;
+}
+#Area .lingua h3, .linguaIT h3{
+    margin-top:0;
+    padding-top:5px ;
+    font-size: 14px;
+    margin-bottom: 1px;
+}
+#Area .lingua p, .linguaIT p{
+    margin-top:0;
+    font-size: 12px;
+}
+.modal-content-Cambio footer{
+    position:relative;
+    bottom:0;
+    left:0;
+    top:-20px;
+    min-height:60px;
+    background-color: white;
+    border-top: 1px solid #5a5959;
+    padding: 0;
+
+    display:flex;
+    justify-content: center;
+}
+
+.modal-content-Cambio footer p{
+    font-size: 12px;
+    color:#5a5959;
+}
+/*quando li clicco*/
+.lingua.click{
+    background-color: black;
+    border-radius: 5px;
+    color:white;
+}
+.linguaIT.noclick{
+    background-color: white;
+    color:black;
+}
+.no-scroll{
+    overflow:hidden;
+}
+
+#button1{
+    display:flex;
+    align-items: center;
+    width: 60px;
+    cursor: pointer;
+    padding: 12px 18px;
+}
+#button1 img{
+    width: 20px;
+    height: 20px;
+}
+
+#button1:hover{
+    background-color: rgb(240, 238, 238);
+    border-radius: 50px;
+
+}
+
+@media(max-width:500px){
+    .menu{
+        width: 500px;
+    }
+    #links{
+        display:none;   
+    }
+    .buttons{
+        display: none;
+    }
+    .tendina img{
+        display:block;
+        width: 24px;
+        height: 24px;
+    }
+    #newMenu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    #accedi img{
+        display:block;
+        width: 24px;
+        height: 24px;
+    }
+    #logo1 img{
+        width: 132px;
+        height:60px;
+    }
+
+}
+
+h1{
+    text-align: center;
+    font-size: 54px;
+    margin-top: 148px;
+}
+
+
+#icone{
+    width: 22px;
+    height: 22px;
+}
+.Varianti{
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    color:#333333;
+    justify-content: center;
+    font-weight: 800;
+}
+.Varianti a{
+    padding-right: 15px;
+    padding-left: 5px;
+}
+.Varianti a:hover{
+    color:rgb(106, 104, 104);
+    text-decoration: underline;
+    text-underline-offset: 15px;
+}
+
+#v1,#v2,#v3,#v4,#v5,#v6{
+    display:flex;
+    align-items: center;
+    margin-right: 10px;
+}
+#v1.active, #v2.active, #v3.active
+#v4.active,#v5.active
+#v6.active{
+    display:flex;
+    align-items: center;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+}
+@media(max-width:500px){
+    h1{
+        display: none;
+    }
+    .Varianti{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 24px;
+        width: 450px;
+        margin-top: 100px;
+        font-size: 16px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+
+        /*-webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));*/
+    }
+    .varianteH{
+        text-underline-offset: 20px;
+    }
+    .varianteH #Home{
+        width: 100px;
+        padding-right: 5px;
+    }
+    
+    
+}
+
+#R-componenti{
+    display:flex;
+    justify-content: space-between;
+    border-radius: 50px;
+    width: 60%;
+    padding: 10px 16px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    border:2px solid rgb(179, 172, 172);
+    align-items: center; 
+    margin-left:19%;
+    margin-top: 30px;
+    cursor: pointer;
+}
+#icona{
+    height: 24px;
+    width: 24px;
+}
+.Cerca{
+    display:flex;
+    align-items: center;
+    
+}
+.Cerca p{
+    font-size: 14px;
+    color:rgb(179, 172, 172);
+    padding-left: 15px;
+}
+
+
+#RicercaVoli #RV{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:15px;
+}
+#RicercaVoli .Cerca{
+    border-radius: 50px;
+    width: 220px;
+    height:30px;
+    border:1px solid  rgb(224, 224, 224);
+    padding:12px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right:10px;
+}
+#RicercaVoli .Cerca p strong{
+    font-size: 16px;
+    color:black;
+}
+#RicercaVoli .Cerca p{
+    font-size: 16px;
+    color:rgb(164, 157, 157);
+}
+#RicercaVoli .Info{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 160px;
+    border-radius: 50px;
+    border: 1px solid black;
+    padding:0 16px 0 16px;
+    margin-right: 10px;
+}
+#RicercaVoli .Info p{
+    padding-left: 5px;
+    color:black;
+}
+#RicercaVoli .Info #icona{
+    width: 16px;
+    height: 16px;
+}
+#RicercaVoli #buttonRicerca{
+    padding:14px 24px 14px 24px;
+}
+#buttonRicerca{
+    background-color: rgb(52, 224, 161);
+    border-radius: 50px;
+    padding: 10px 16px;
+    color: black;
+}
+
+#buttonRicerca:hover{
+    background-color: #88e4c4;
+}
+@media(max-width:500px){
+    #R-componenti{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        margin-left: 24px;
+        width: 420px;
+    }
+    .Cerca{
+       align-items: none;
+       display: flex;
+       justify-content: flex-start;
+    }
+    .Cerca p{
+        font-size: 16px;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+    }
+    #buttonRicerca{
+        padding:16px 180px;
+        font-size: 16px;
+    }
+    #RV{
+        display:flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .Cerca{
+        margin-top:10px;
+        min-width: 400px;
+    }
+    .Info{
+        margin-top: 10px;
+    }
+    #RV #buttonRicerca{
+        margin-top: 10px;
+    }
+}
+
+
+.IA{
+    margin-top: 70px;
+    width: 1136px;
+    background-image: url(photoAI.jpeg);
+    background-size: cover;
+    background-position: 100% 65%;
+    color: white;
+    line-height: 1.5; /*spazio tra le righe*/
+    padding-top: 80px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-left:180px;
+}
+
+.supporto{
+    display:flex;
+    align-items: center;
+    margin-left: 10%;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+#button2{
+    color:black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+#testo{
+    font-size: 56px;
+    margin-left: 10%;
+    margin-right: 55%;
+    line-height: 1.2;
+}
+#testo2{
+    margin-left: 10%;
+    font-size: 32px;
+    margin-right:55%;
+}
+
+#link1{
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 200px;
+    color:black;
+    background-color: white;
+    border-radius: 50px;
+    padding: 14px 24px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+@media(max-width:500px){
+    .testoCompleto{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: auto;
+        padding-top: 10px;
+        margin-bottom: 250px;
+    }
+    .IA{
+        margin-left:0;
+        margin-right: 0;
+        border-radius: 30px;
+        width:500px;
+        background-size:cover;
+        background-position: 80%;
+        height: 380px;
+        padding-top: 30px;
+        padding-bottom: 100px;
+
+    }
+    .supporto{
+        font-size: 14px;
+        margin-left: 20px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    #testo{
+        font-size:42px;
+        margin-right: 0;
+        margin-left: 20px;
+    }
+    #testo2{
+        font-size: 18px;
+        margin-right: 0;
+        margin-left: 20px;
+    }
+    #link1{
+        margin-bottom: 0;
+        margin-left: 20px;
+    }
+
+}
+
+
+h3{
+    font-size: 24px;
+    margin-top: 10%;
+    margin-bottom: 10px;
+}
+#sottotitolo{
+    color:#333333ee;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.Litorale{
+    margin-left: 180px;
+    position:relative;
+}
+#annunci{
+    display: flex;
+    height: 300px;
+    margin-right:180px;
+}
+
+#box img{
+    border-radius: 10px;
+    flex-grow: 1;
+    margin: 5px;
+    width: 280px;
+    height: 280px;
+}
+#box{
+position: relative;
+}
+#box .hidden{
+    display:none;
+}
+#box:hover{
+    opacity: 0.8; /*Ombra chiara sopra */
+}
+#box #testo1{
+    position:absolute;
+    top:214px;
+    left:5px;
+
+    color: white;
+    padding: 24px 20px 10px 10px;
+    width: 86%;
+    height: auto;
+    margin: 0;
+    font-size: 28px;
+    background-color: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0));
+    border-radius: 10px;
+}
+@media(max-width:500px){
+    .Litorale{
+        margin-left: 24px;
+        margin-right: 24px;
+        height: auto;
+    }
+    #annunci{
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        margin-right: 0;
+
+        display:flex;
+    }
+    #box{
+        aspect-ratio: auto 300 / 300; /*rapporto proporzionale tra altezza e largezza*/
+        flex-grow: 0;
+    }
+}
+
+.visite{
+    margin-left: 180px;
+    margin-right:180px;
+    position:relative;
+}
+
+#freccia{
+    position:absolute;
+    top:45%;
+    left:1135px;
+    z-index: 1;
+}
+#freccia-left .hidden{
+    display:none;
+}
+#freccia-left{
+    position:absolute;
+    top:45%;
+    left:-15px;
+    z-index: 1;
+}
+#freccia img, #freccia-left img{
+    background-color: white;
+    border-radius: 50%;
+    border:1px solid black;
+    width: 40px;
+    height: 40px;
+    color:black;
+}
+#freccia img:hover, #freccia-left img:hover{
+    background-color: rgb(122, 122, 122);
+}
+#annuncio2{
+    display: flex;
+    height: 500px;
+}
+#visita{
+    list-style-type: none;
+    padding:0;
+    flex-grow: 1;
+    margin:5px;
+
+    display:flex;
+    flex-direction: column;
+}
+#visita.hidden{
+    display:none;
+}
+#visita .foto_container:hover{
+    opacity: 0.8;
+}
+
+#visita p{
+    font-size: 18px;
+    padding:0;
+    margin:0;
+}
+
+.foto_container{
+    height: 300px;
+    overflow: hidden;
+}
+
+#foto2{
+    border-radius: 10px;
+    margin-bottom: 8px;
+    height: 300px;
+    width: 280px;
+    background-position: center;
+    transition: transform 0.5s ease-in-out;
+}
+#foto2:hover{
+    opacity: 0.8;
+}
+
+#cuore{
+    position: relative;
+    top: 45px;
+    left: 230px;
+    width: 24px; 
+    height: 24px;
+    border-radius: 50%;
+    padding:6px;
+    background-color: white;
+    z-index: 1;
+}
+
+.recensioni{
+    display:flex;
+    justify-content: space-between;
+    width:130px;
+    padding:0;
+}
+
+#cerchio{
+    background-color: rgb(0, 170, 108);
+    border-radius: 50%;
+    width: 12px;
+    height:12px;
+    margin:2px;
+}
+#visita .recensioni p{
+    padding-left: 5px;
+    font-size: 14px;
+    color: #333333;
+}
+#visita .prezzo,#visita .simbolo, #visita #descr1{
+    font-size: 14px;
+    font-weight: 600;
+    margin:0;
+    padding:0;
+    display:inline;
+}
+#visita #descr{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media(max-width:500px){
+    .visite{
+        margin-left:24px;
+        margin-right: 0;
+    }
+    #annuncio2{
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+    .prezzo{
+        display:none;
+    }
+    #freccia{
+        display:none;
+    }
+    
+}
+
+.Esplorare{
+    background-color: rgb(242, 241, 236);
+    max-width: 100%;
+    position:relative;
+}
+.Esplorare #freccia{
+    left: 1300px;
+}
+.Esplorare #freccia-left{
+    left:160px;
+}
+.Esplorare h3{
+    margin-left: 180px;
+    margin-right:180px;
+    padding-top:60px;
+}
+.annuncio3{
+    margin-left: 180px;
+    margin-right:180px;
+    display:flex;
+    height:400px;
+}
+#visita2{
+    flex-grow: 1;
+    margin:5px;
+    display: flex;
+    flex-direction: column;
+}
+#visita2.hidden{
+    display:none;
+}
+#visita2 img:hover{
+    opacity:0.8;
+}
+
+#visita2 p{
+    font-size: 18px;
+}
+
+#visita2 img{
+    border-radius: 10px;
+    height: 300px;
+    width: 371px;
+}
+@media(max-width:500px){
+    .Esplorare h3{
+        margin-left: 24px;
+    }
+    .annuncio3{
+        margin-left: 24px;
+        margin-right: 0;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+    #visita2{
+        aspect-ratio: auto 300 / 300; 
+    }
+
+}
+
+.Viaggio{
+    margin-left:180px;
+    position:relative;
+}
+.Viaggio #freccia{
+    top:50%;
+}
+.Viaggio h3{
+    font-size: 28px;
+    padding-bottom: 24px;
+}
+.Viaggio #sottotitolo{
+    font-size: 24px;
+    color: black;
+}
+@media(max-width:500px){
+    .Viaggio{
+        margin-left: 24px;
+    }
+}
+
+.Viaggio2{
+    margin-left:180px;
+    position:relative;
+}
+.Viaggio2 #freccia{
+    top:50%;
+}
+.Viaggio2 #testo2{
+    position:absolute;
+    top:180px;
+    left:5px;
+
+    color: white;
+    padding: 24px 20px 10px 10px;
+    width: 86%;
+    height: auto;
+    margin: 0;
+    font-size: 28px;
+    background-color: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0));
+    border-radius: 10px;
+}
+
+
+@media(max-width:500px){
+    .Viaggio2{
+        margin-left: 24px;
+    }
+}
+
+#Premi{
+    background-color: #fff7e1;
+    margin-top:60px;
+    margin-bottom: 60px;
+}
+.corpo{
+    display:flex;
+    justify-content: flex-start;
+}
+.testo3{
+    padding-top:100px;
+    margin-left:180px;
+    line-height: 0.8;
+    width:500px;
+}
+
+.testo3 #logo{
+    width: 80px;
+    height:88px;
+    padding-bottom: 0;
+}
+.testo3 h2{
+    font-size: 50px;
+    letter-spacing: 0.5px;
+}
+
+.testo3 p{
+    font-size: 24px;
+}
+.collage img{
+    height:auto;
+    width: 650px;
+    background-clip: border-box; 
+}
+@media(max-width:500px){
+    #Premi .testo3{
+        margin-left: 24px;
+        margin-right: 0;
+        width: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .collage img{
+        margin-left: 0;
+        width: 500px;
+        height:auto;
+    }
+    .corpo{
+        width:500px;
+        display:flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    
+}
+
+footer{
+    background-color: rgb(242, 242, 242);
+    padding-top: 32px;
+    padding-bottom: 60px;
+}
+
+.fine{
+    display: flex;
+    justify-content: flex-start;
+    margin-top:5px;
+    margin-left: 175px;
+}
+.lista{
+    list-style-type: none;
+    line-height: 1.5;
+}
+.lista #title{
+    font-size:16px;
+    color:#333333;
+    margin:0;
+    padding-top:5px;
+}
+.titolo img{
+    display: none;
+}
+.lista a{
+    font-size: 14px;
+    color:black;
+    cursor: pointer;
+}
+.lista #title p{
+    display:none;
+}
+.lista a:hover{
+    text-decoration: underline;
+    color:#888484;
+}
+
+
+.lista1{
+    list-style-type: none;
+    line-height: 1.5;
+    padding-left:200px;
+}
+.lista1 #title{
+    font-size:16px;
+    color:#333333;
+    margin:0;
+    padding-top:5px;
+}
+.lista1 p{
+    font-size: 14px;
+    color:#333333;
+    cursor: pointer;
+}
+.lista1 #link3{
+    text-decoration: underline;
+    color:#333333;
+}
+.lista1 #link3:hover{
+    color:#888484;
+}
+
+.fine2{
+    display:flex;
+    justify-content:flex-start;
+    margin-left: 170px;
+    width: 1200px;
+    height: 100px;
+}
+.fine2 img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    margin-left: 25px;
+    margin-top:15px;
+}
+.f2part1{
+    display:flex;
+    justify-content: flex-start;
+}
+.links{
+    list-style-type: none;
+    padding-left:5px;
+    line-height: 1.5;
+    width: auto;
+}
+.links #cap{
+    font-size: 12px;
+    color:#333333;
+    text-decoration: none;
+    padding:0;
+}
+.links #cap:hover{
+    color: none;
+}
+.links a{
+    cursor:pointer;
+    font-size:16px;
+    color:#333333;
+    text-decoration: underline;
+    padding-right: 15px;
+}
+.links a:hover{
+    color: #888484;
+}
+
+.Opzioni{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    width: 300px;
+    height:60px;
+}
+.scelta{
+    display:flex;
+    justify-content: space-between;
+    margin:10px;
+    color:black;
+    background-color: white;
+    border-radius: 10px;
+    border:2px solid rgb(213, 211, 211);
+    padding: 7px 14px 5px;
+    width: 100px;
+    height:20px;
+    cursor: pointer;
+}
+.scelta i{
+    width: 20px;
+    height: 20px;
+    margin-top:2px;
+    
+}
+.scelta div{
+    font-size:15px;
+}
+.scelta:hover{
+    background-color: rgb(242, 242, 242) ;
+}
+
+.fine3{
+    margin-left:180px;
+    width: 50%;
+    margin-top:-18px;
+    padding-left: 15px;
+}
+.fine3 p{
+    font-size: 12px;
+    color:#333333;
+}
+.fine3 a{
+    color:black;
+    cursor: pointer;
+}
+.fine3 a:hover{
+    color:#333333;
+    text-decoration: underline;
+}
+
+.social{
+   margin-left: 73%;
+   margin-top: -65px;
+}
+.social img{
+    width: 20px;
+    height: 20px;
+    padding-right: 12px;
+}
+
+@media(max-width:500px){
+    footer{
+        height: 550px;
+    }
+    .DisposizioneFooter{
+        display:flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .fine{
+        margin-left: 24px;
+        display:flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .lista{
+        padding-left: 0;
+    }
+    .lista a{
+        display:none;
+    }
+    .lista #title{
+        display: block;
+        padding-top: 2px;
+    }
+   .titolo img{
+        display: block;
+        width: 12px;
+        height: 12px;
+        padding-right: 15px;
+   }
+   .titolo{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+   }
+
+    .lista1{
+        padding-left:0;
+    }
+    .lista1 p{
+        display:none;
+    }
+    .lista1 #title{
+        padding-top: 0;
+    }
+
+    .fine2{
+        margin-left:24px;
+        width: auto;
+        height:auto;
+        display:flex;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+    }
+    .f2part1{
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .f2part1 img{
+        margin-left: 0;
+    }
+    .Opzioni{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: auto;
+        margin-left: 0;
+    }
+    .Opzioni .scelta{
+        width: 400px;
+        margin:5px;
+    }
+    .fine3{
+        margin-left:24px;
+        width: auto;
+    }
+    .social{
+        margin-top:-210px;
+        display:flex;
+        justify-content: flex-end;
+    }
+    .social img{
+        height: 24px;
+        width: 24px;
+        padding-right: 25px;
+    }
+
+}
+
+
+/*API meteo*/
+#meteo {
+    padding: 15px;
+    width: 200px;
+    z-index:1;
+    position:absolute;
+    left:50%;
+}
+  
+#meteo img {
+    vertical-align: middle;
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+}
+  
+#meteo span {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: aliceblue;
+    width: 200px;
+}
+
+.location{
+    display:inline;
+    margin:0;
+    padding:0;
+}
+
+#meteo .grassetto{
+    font-weight: bold;
+}
+
+
+
+
+
